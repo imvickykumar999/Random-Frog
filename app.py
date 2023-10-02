@@ -24,7 +24,7 @@ def home():
 @app.route('/random/', methods = ['GET'])
 def static_json():
 	num = random.randint(1, 10)
-	return jsonify({"image":f"https://randomfrog.herokuapp.com/static/{num}.jpg","link":f"https://randomfrog.herokuapp.com/?i={num}"})
+	return jsonify({"image":f"static/{num}.jpg","link":f"/?i={num}"})
 
 
 # https://stackoverflow.com/a/57910276/11493297
